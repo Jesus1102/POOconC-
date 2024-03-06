@@ -61,3 +61,17 @@ int main(){
 
     return 0;
 }
+
+/*Persona(string tipoDoc1,string nombre1, string apellido1, string sexo1, int documento1, int edad1, float peso1, float estatura1){
+
+        tipoDoc = tipoDoc1;
+        nombre = nombre1;
+        apellido = apellido1;
+        sexo = sexo1;
+        documento = documento1;
+        edad = edad1;
+        peso = peso1;
+        estatura = estatura1;      
+
+    }
+    */ 
