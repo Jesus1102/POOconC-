@@ -10,6 +10,25 @@ class Persona{
     Persona(){
         
     };
+
+
+    /*accesores
+    //setter es cambiar y registrar una variable(s)
+    Void setName(string x o name){
+     name = x si es diferente;
+
+     this -> name = name si son iguales
+
+     }
+    // leer una(s) variable
+     String getName(){
+
+        return name;
+     
+     }
+    
+    
+    */
     
     void pedirDatos(){
         
@@ -83,7 +102,9 @@ void mayorEdad(){
 
 int main()
 {
+    Persona user1;
 
+    user1.getName;
 
     return 0;
 }
