@@ -26,9 +26,38 @@ class Persona{
         return name;
      
      }
+     
+    void setTipoDoc(String tipoDoc){
+        this -> tipoDoc = tipoDoc;
+    }
+    void setDocumento(Int documento){
+        this -> documento = documento;
+    }
+    void setName (String name){
+        this -> name = nombre;
+    }
+    void setApellido (String apellido){
+        this -> apellido = apellido
+    }
+    void setPeso (Float peso){
+        this -> peso = peso;
+    }
+    void setEstatura (Float estatura){
+        this -> estatura = estatura;
+    }
+    void setEdad (Int edad){
+        this -> edad = edad;
+    }
+    void setSexo (String){
+        this -> sexo = sexo;
+    }
     
-    
+    String getTipoDoc(){
+        
+        return tipoDoc;
+    }
     */
+    
     
     void pedirDatos(){
         
