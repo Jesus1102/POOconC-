@@ -31,4 +31,25 @@ class Nequi{
         };
     }
 
+    void recarga(){
+
+    }
+    void colchon(){
+
+    }
+    void meta(){
+
+    }
+    void bolsillo(){
+
+    }
+    void sacarPlata(){
+
+    }
+    void movimientos(){
+        
+    }
+
+
+
 };
