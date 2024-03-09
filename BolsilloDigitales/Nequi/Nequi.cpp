@@ -5,6 +5,6 @@ class Nequi{
 
     private:
     int opcion;
-    string claves[10] ={}, usuario[10] = {};
+    string claves[10] = {}, usuario[10] = {};
 
 };
