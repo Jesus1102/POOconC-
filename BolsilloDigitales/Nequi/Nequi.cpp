@@ -21,15 +21,12 @@ class Nequi{
                 if (clave == clavesRegistradas[i] && usuario == usuariosRegistrados[i]){
                     return true;
 
-                }
-                else{
-
-                    cout << "Clave o usuario incorrestos" << endl;
-                    break;
-                }
-                
+                }                
 
             }
+
+            cout << "Clave o usuario incorrestos" << endl;
+
             
         };
     }
