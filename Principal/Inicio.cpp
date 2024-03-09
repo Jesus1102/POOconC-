@@ -15,7 +15,7 @@ int main (){
     Persona user1;
 
     user1.pedirDatos();
-    user1.mostrarDatos();
+    user1.mostrarPersona();
     user1.calcularImc();
     user1.mayorEdad();
     
