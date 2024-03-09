@@ -2,7 +2,7 @@
 using namespace std;
 class Persona{
     
-    private:
+    public:
     string tipoDoc,nombre,apellido,sexo;
     int documento, edad;
     float peso, estatura,pesoActual = 0;
@@ -110,7 +110,7 @@ class Persona{
         
     }
 
-void mayorEdad(){
+    void mayorEdad(){
 
     if(edad <= 17){
 
@@ -133,7 +133,12 @@ int main()
 {
     Persona user1;
 
-    user1.getName;
+    user1.pedirDatos();
+    user1.mostrarPersona();
+    user1.calcularImc();
+    user1.mayorEdad();
+
+
 
     return 0;
 }
