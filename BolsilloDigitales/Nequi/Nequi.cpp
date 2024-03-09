@@ -26,8 +26,8 @@ class Nequi{
             }
 
             cout << "Clave o usuario incorrestos" << endl;
+            cout << "Ingrese un usuario y clave validos" << endl;
 
-            
         };
     }
 
