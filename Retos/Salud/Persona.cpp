@@ -2,7 +2,7 @@
 using namespace std;
 class Persona{
     
-    public:
+    private:
     string tipoDoc,nombre,apellido,sexo;
     int documento, edad;
     float peso, estatura,pesoActual = 0;
@@ -11,7 +11,7 @@ class Persona{
         
     };
 
-
+    public:
     /*accesores
     //setter es cambiar y registrar una variable(s)
     Void setName(string x o name){
@@ -26,39 +26,40 @@ class Persona{
         return name;
      
      }
-     
-    void setTipoDoc(String tipoDoc){
+     */
+
+    void setTipoDoc(string tipoDoc){
         this -> tipoDoc = tipoDoc;
     }
-    void setDocumento(Int documento){
+    void setDocumento(int documento){
         this -> documento = documento;
     }
-    void setName (String name){
-        this -> name = nombre;
+    void setName (string nombre){
+        this -> nombre = nombre;
     }
-    void setApellido (String apellido){
-        this -> apellido = apellido
+    void setApellido (string apellido){
+        this -> apellido = apellido;
     }
-    void setPeso (Float peso){
+    void setPeso (float peso){
         this -> peso = peso;
     }
-    void setEstatura (Float estatura){
+    void setEstatura (float estatura){
         this -> estatura = estatura;
     }
-    void setEdad (Int edad){
+    void setEdad (int edad){
         this -> edad = edad;
     }
-    void setSexo (String){
+    void setSexo (string){
         this -> sexo = sexo;
     }
     
-    String getTipoDoc(){
+    string getTipoDoc(){
         
         return tipoDoc;
     }
-    */
     
-    
+   // Metodos
+    public:
     void pedirDatos(){
         
         cout << "Ingrese su tipo de documento" << endl;
@@ -93,19 +94,19 @@ class Persona{
         
     }
     
-    void calcularImc(){
+    string calcularImc(){
         
         pesoActual = peso/(estatura * estatura);
         
         if(pesoActual < 20 ){
-            cout << "El peso esta por debajo de lo ideal" << endl;
+            return "Peso bajo";
 
         }
         else if(pesoActual >= 20 && pesoActual <= 25){
-            cout << "El peso actual es el ideal" << endl;
+            return "Peso ideal";
         }
         else{
-            cout << "El peso actual esta en sobrepeso" << endl;
+            return "Sobrepeso";
         }
         
     }
@@ -123,21 +124,18 @@ class Persona{
     
 }
     
-
-    
-    
 };
 
 
 int main()
 {
     Persona user1;
-
+    /*
     user1.pedirDatos();
     user1.mostrarPersona();
     user1.calcularImc();
     user1.mayorEdad();
-
+    */
 
 
     return 0;
