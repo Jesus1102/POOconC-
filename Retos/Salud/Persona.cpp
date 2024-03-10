@@ -7,11 +7,12 @@ class Persona{
     int documento, edad;
     float peso, estatura,pesoActual = 0;
     
+    public:
     Persona(){
         
     };
 
-    public:
+    
     /*accesores
     //setter es cambiar y registrar una variable(s)
     Void setName(string x o name){
