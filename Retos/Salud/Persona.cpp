@@ -55,8 +55,28 @@ class Persona{
     }
     
     string getTipoDoc(){
-        
         return tipoDoc;
+    }
+    int getDocumento(){
+        return documento;
+    }
+    string getName(){
+        return nombre;
+    }
+    string getApellido(){
+        return apellido;
+    }
+    float getPeso(){
+        return peso;
+    }
+    float getEstatura(){
+        return estatura;
+    }
+    int getEdad(){
+        return edad;
+    }
+    string getSexo(){
+        return sexo;
     }
     
    // Metodos
@@ -129,10 +149,12 @@ class Persona{
 
 class Empleado : Persona{
 
+    Persona user1;
+
     public:
     string cargo, departamento;
     int valorHora, horasTrabajadas;
-    float honorarios = 0;
+    float honorarios = 0, reteica = 0;
 
     void pedirDatosE(){
         cout << "Ingrese su cargo "<< endl;
@@ -144,9 +166,28 @@ class Empleado : Persona{
         cout << "Ingrese las horas trabajadas " << endl;
         cin >> horasTrabajadas;
     }
+
     void calcularHonorarios(){
-        honorarios = (valorHora*horasTrabajadas)- (1/100)*0.966;
+        honorarios = (valorHora*horasTrabajadas);
+        reteica = (honorarios * 0.966)/100;
+        honorarios = honorarios - reteica;
     }
+
+    void mostraDatosE(){
+
+        cout << "Tipo de documento: " << user1.getTipoDoc() << endl;
+        cout << "Numero de documento: " << user1.getEstatura() << endl;
+        cout << "Nombre: " << user1.getName() << endl;
+        cout << "Apellido: " << user1.getApellido() << endl;
+        cout << "Cargo: " << cargo << endl;
+        cout << "Horas trbajadas: " << horasTrabajadas<< endl;
+        cout << "valor por hora: " << valorHora << endl;
+        cout << "Total a pagar: " << honorarios << endl;
+
+    }
+
+
+
 };
 
 int main()
