@@ -7,6 +7,10 @@ class Nequi{
     int opcion;
     string clavesRegistradas[10] = {}, usuariosRegistrados[10] = {}, clave, usuario;
 
+
+    Nequi (){
+
+    };
     bool accesoApp(){
 
         while(true){
