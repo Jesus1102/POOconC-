@@ -3,12 +3,12 @@
 using namespace std;
 
 class Animal{
-    /Atributos./
+    //Atributos./
     public:
         string nombreAnimal;
         int edadAnimal;
 
-    /Metodos modificador de acceso valor retorno nombre (parametro)/
+    //Metodos modificador de acceso valor retorno nombre (parametro)/
     public:
     
     void crearAnimal(){
@@ -25,7 +25,7 @@ class Animal{
 };
 
 class Carro{
-    /Atributos./
+    //Atributos./
 
     string motor;
     string modelo;
@@ -42,20 +42,20 @@ class Carro{
 
 int main(){
 
-    /Instancia de clase -> Objeto nombre de la clase nombre del objeto./
+    //nstancia de clase -> Objeto nombre de la clase nombre del objeto./
 
     Animal oso;
     Animal tigre;
     Animal ave;
 
-    /Acceder a los atributos nombre_del_objeto. nombre_atributo/
+    //Acceder a los atributos nombre_del_objeto. nombre_atributo/
 
     oso.nombreAnimal = "Tony";
 
     cout << "Por favor ingrese el nombre del tigre" << endl;
     cin >> tigre.nombreAnimal;
 
-    /Acceder a métodos./
+    //Acceder a métodos./
 
     oso.crearAnimal();
 
