@@ -127,16 +127,37 @@ class Persona{
     
 };
 
+class Empleado : Persona{
+
+    public:
+    string cargo, departamento;
+    int valorHora, horasTrabajadas;
+    float honorarios = 0;
+
+    void pedirDatosE(){
+        cout << "Ingrese su cargo "<< endl;
+        cin >> cargo;
+        cout << "Ingrese su departamento " << endl;
+        cin >> departamento;
+        cout << "Ingrese el valor por hora " << endl;
+        cin >> valorHora;
+        cout << "Ingrese las horas trabajadas " << endl;
+        cin >> horasTrabajadas;
+    }
+    void calcularHonorarios(){
+        honorarios = (valorHora*horasTrabajadas)- (1/100)*0.966;
+    }
+};
 
 int main()
 {
     Persona user1;
-    /*
+    
     user1.pedirDatos();
     user1.mostrarPersona();
     user1.calcularImc();
     user1.mayorEdad();
-    */
+    
 
 
     return 0;
