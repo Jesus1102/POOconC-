@@ -146,17 +146,21 @@ class Persona{
 }
     
 };
+=================================================================================
+#include <iostream>
+#include "./Persona.cpp"
+using namespace std;
 
-class Empleado : Persona{
+class Empleado : public Persona{
 
     Persona user1;
 
     public:
     string cargo, departamento;
-    int valorHora, horasTrabajadas;
+    int valorHora, horasTrabajadas, fechaNacimiento, anoActual, edad ;
     float honorarios = 0, reteica = 0;
 
-    void pedirDatosE(){
+    void pedirDatos(){
         cout << "Ingrese su cargo "<< endl;
         cin >> cargo;
         cout << "Ingrese su departamento " << endl;
@@ -165,6 +169,11 @@ class Empleado : Persona{
         cin >> valorHora;
         cout << "Ingrese las horas trabajadas " << endl;
         cin >> horasTrabajadas;
+        cout << "Ingrese su año de nacimiento: " << endl;
+        cin >> fechaNacimiento;
+        cout << "Ingrese el año actual: " << endl;
+        cin >> anoActual;
+
     }
 
     void calcularHonorarios(){
@@ -173,7 +182,13 @@ class Empleado : Persona{
         honorarios = honorarios - reteica;
     }
 
-    void mostraDatosE(){
+    int mayorEdad(){
+        edad = anoActual - fechaNacimiento;
+        return edad;
+        
+    }
+
+    void mostraDatos(){
 
         cout << "Tipo de documento: " << user1.getTipoDoc() << endl;
         cout << "Numero de documento: " << user1.getEstatura() << endl;
@@ -189,17 +204,3 @@ class Empleado : Persona{
 
 
 };
-
-int main()
-{
-    Persona user1;
-    
-    user1.pedirDatos();
-    user1.mostrarPersona();
-    user1.calcularImc();
-    user1.mayorEdad();
-    
-
-
-    return 0;
-}
