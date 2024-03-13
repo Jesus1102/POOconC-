@@ -14,6 +14,7 @@ class Inicio{
 int main (){
 
     Persona user1;
+    Empleado Emp1;
 
     user1.pedirDatos();
     user1.mostrarPersona();
@@ -28,5 +29,10 @@ int main (){
     };
     user1.mayorEdad();
     
+
+    Emp1.pedirDatos();
+    Emp1.calcularHonorarios();
+    Emp1.mayorEdad();
+    Emp1.mostraDatos();
     return 0;
 }
