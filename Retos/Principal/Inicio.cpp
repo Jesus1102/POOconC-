@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../Salud/Persona1.cpp"
+#include "../Salud/Persona.cpp"
 #include "../Salud/Empleado.cpp"
 
 using namespace std;
@@ -13,7 +13,7 @@ class Inicio{
 
 int main (){
 
-    Persona1 user1;
+    Persona user1;
     Empleado Emp1;
 
     user1.pedirDatos();
