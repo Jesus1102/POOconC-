@@ -28,7 +28,7 @@
             "preLaunchTask": "C/C++: g++.exe build active file"
         },
         {
-            "name": "C/C++: ps5a_jesus60302.cpp build and debug active file",
+            "name": "C/C++: gcc build and debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "C:\\Users\\Famili Peña Avila\\Documents\\GitHub\\POOconC-\\Retos\\Principal\\inicio.exe",
