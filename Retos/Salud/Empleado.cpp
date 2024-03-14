@@ -4,7 +4,7 @@ using namespace std;
 
 class Empleado : public Persona{
 
-    Persona user1;
+    
 
     public:
     string cargo, departamento;
@@ -41,10 +41,10 @@ class Empleado : public Persona{
 
     void mostraDatos(){
 
-        cout << "Tipo de documento: " << user1.getTipoDoc() << endl;
-        cout << "Numero de documento: " << user1.getEstatura() << endl;
-        cout << "Nombre: " << user1.getName() << endl;
-        cout << "Apellido: " << user1.getApellido() << endl;
+        cout << "Tipo de documento: " << getTipoDoc() << endl;
+        cout << "Numero de documento: " <<  getEstatura() << endl;
+        cout << "Nombre: " << getName() << endl;
+        cout << "Apellido: " << getApellido() << endl;
         cout << "Cargo: " << cargo << endl;
         cout << "Horas trbajadas: " << horasTrabajadas<< endl;
         cout << "valor por hora: " << valorHora << endl;
