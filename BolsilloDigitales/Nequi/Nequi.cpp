@@ -4,8 +4,8 @@ using namespace std;
 class Nequi{
 
     private:
-    int opcion,i = 0;
-    string clavesRegistradas[10] = {}, usuariosRegistrados[10] = {}, clave, usuario;
+    int opcion,i = 3;
+    string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave, usuario;
 
 
     Nequi (){
@@ -13,7 +13,7 @@ class Nequi{
     };
     bool accesoApp(){
 
-        while( i < 3){
+        while( i > 0){
             cout << "Ingrese su usuario: " << endl;
             cin >> usuario;
 
@@ -28,7 +28,7 @@ class Nequi{
                 }                
 
             }
-            i++;
+            i--;
 
             cout << "Clave o usuario incorrestos" << endl;
             cout << "Ingrese un usuario y clave validos" << endl;
