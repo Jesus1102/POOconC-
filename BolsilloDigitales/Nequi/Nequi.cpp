@@ -217,22 +217,29 @@ class Nequi{
 
         srand(time(NULL));
 
-        int opcion, random;
+        int opcion1, random;
         random = 100000+rand()%(999999+1-100000);
 
         cout << "Opciones para sacar" << endl;
         cout << "1. Para cajero bancolombia" << endl;
         cout << "2. Para punto fisico (Corresponsales y puntos nequi)" << endl;
         cout << "3. Para conocer los lugares de retiro " << endl;   
-        cin >> opcion;
+        cin >> opcion1;
     
-        if (opcion == 1 || opcion == 2){
+        if (opcion1 == 1 || opcion1 == 2){
 
-            cout << "El codigo para retirar es: " << random << endl;
+            cout << "De donde desea que saga la plata? " << endl;
+            cout << "1. Disponible " << endl << "2. Bolsillo " << endl;
+            cin >> opcion;
+            if (opcion == 1){
+                cout << "El codigo para retirar es: " << random << endl;
+            }
+            if (opcion == 2){
+                cout << "El codigo para retirar es: " << random << endl;
+            }
 
         }
-        else if (opcion == 3)
-        {   
+        else if (opcion1 == 3){   
             cout << "Copie este link para saber sus puntos de retiro cercano " << endl;
             cout << "https://www.bancolombia.com/puntos-de-atencion/buscar-en-mapa";
         }
