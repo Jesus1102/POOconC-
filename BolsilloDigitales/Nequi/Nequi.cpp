@@ -1,6 +1,7 @@
 #include <iostream>
 #include <time.h>
 #include <stdlib.h>
+#include <list>
 using namespace std;
 
 
@@ -10,11 +11,13 @@ class Nequi{
     int opcion,i = 3;
     float saldoCuenta = 0, valor = 0, colchon1 = 0, bolsillo1 = 0, arrayMovimientos[3];
     string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave = "1234", usuario = "3214459100";
+    list <string> Movimientos1;
 
     public:
     Nequi (){
 
     };
+    
     float getSaldoCuenta(){
         return saldoCuenta;
     }
