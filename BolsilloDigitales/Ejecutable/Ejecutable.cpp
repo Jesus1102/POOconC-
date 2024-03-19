@@ -13,7 +13,7 @@ int main(){
     if(user1.accesoApp() == true){
         while (true)
         {   
-            cout << "su valor disponible es: " << user1.getValor() << endl; 
+            cout << "su valor disponible es: " << user1.getSaldoCuenta() << endl; 
             cout << "Eliga la opcion para la funcion que desea: " << endl;
             cin >> opcion;
             

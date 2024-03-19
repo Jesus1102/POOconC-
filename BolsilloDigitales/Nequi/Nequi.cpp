@@ -15,8 +15,8 @@ class Nequi{
     Nequi (){
 
     };
-    float getValor(){
-        return valor;
+    float getSaldoCuenta(){
+        return saldoCuenta;
     }
  
     bool accesoApp(){
@@ -73,7 +73,7 @@ class Nequi{
                         cout << "Ingrese un valor valido" << endl;
                     }
                     else{
-                        saldoCuenta = valor;
+                        saldoCuenta += valor;
                         return "Recarga realizada con exito";
                     }
 
@@ -108,7 +108,7 @@ class Nequi{
                         cout << "Ingrese un valor valido" << endl;
                     }
                     else{
-                        saldoCuenta = valor;
+                        saldoCuenta += valor;
                         return "Recarga realizada con exito";
                     }
 
@@ -127,7 +127,7 @@ class Nequi{
                         cout << "Ingrese un valor valido" << endl;
                     }
                     else{
-                        saldoCuenta = valor;
+                        saldoCuenta += valor;
                         return "Recarga realizada con exito";
                     }
 
@@ -155,15 +155,16 @@ class Nequi{
             cout << "Cuanto vas a meter? " << endl;
             cout << "-1. para salir" << endl;
             cin >> valor;
-            if(valor < saldoCuenta){
+            if(valor > saldoCuenta){
                 cout << "Ingrese un valor valido" << endl;
-            }
-            if( valor == -1){
-                break;
             }
             else{
                 colchon1 = valor;
                 saldoCuenta -= colchon1;
+                break;
+            }
+            if( valor == -1){
+                break;
             }
             
         }
@@ -213,7 +214,7 @@ class Nequi{
         
         while (true)
         {   
-            if(valorBolsillo < saldoCuenta){
+            if(valorBolsillo > saldoCuenta){
                 cout << "Ingrese un valor valido" << endl;
             }
             else if(valor == -1){
@@ -222,6 +223,7 @@ class Nequi{
             else{
                 bolsillo1 = valorBolsillo;
                 saldoCuenta -= valorBolsillo;
+                break;
             }
         }
 
