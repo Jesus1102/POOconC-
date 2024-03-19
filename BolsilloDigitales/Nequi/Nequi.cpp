@@ -198,13 +198,15 @@ class Nequi{
 
         cout << "¿Cuanto vas a dejar?" << endl;
         cin >> valorBolsillo;
-
-        if(valorBolsillo < saldoCuenta){
-            cout << "Ingrese un valor valido" << endl;
-        }
-        else{
-            colchon = valor;
-            saldoCuenta -= colchon;
+        while (true)
+        {
+            if(valorBolsillo < saldoCuenta){
+                cout << "Ingrese un valor valido" << endl;
+            }
+            else{
+                bolsillo = valorBolsillo;
+                saldoCuenta -= valorBolsillo;
+            }
         }
 
     }
