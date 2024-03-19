@@ -243,15 +243,37 @@ class Nequi{
         cin >> opcion1;
     
         if (opcion1 == 1 || opcion1 == 2){
-
             cout << "De donde desea que saga la plata? " << endl;
             cout << "1. Disponible " << endl << "2. Bolsillo " << endl;
             cin >> opcion;
             if (opcion == 1){
+                cout << "Cuanto desea sacar? " << endl;
+                cin >> valor;
+                while(valor > saldoCuenta){
+                    cout << "Ingrese un valor valido" << endl;
+                    cin >> valor;
+                    if (valor <= saldoCuenta){
+                        saldoCuenta -= valor;
+                        break;
+                    }
+                }
                 cout << "El codigo para retirar es: " << random << endl;
+                cout << "su nuevo saldo en bolsillo es " << saldoCuenta << endl;
+
             }
             if (opcion == 2){
+                cout << "Cuanto desea sacar? " << endl;
+                cin >> valor;
+                while(valor > bolsillo1){
+                    cout << "Ingrese un valor valido" << endl;
+                    cin >> valor;
+                    if (valor <= bolsillo1){
+                        bolsillo1 -= valor;
+                        break;
+                    }
+                }
                 cout << "El codigo para retirar es: " << random << endl;
+                cout << "su nuevo saldo en bolsillo es " << bolsillo1 << endl;
             }
 
         }
