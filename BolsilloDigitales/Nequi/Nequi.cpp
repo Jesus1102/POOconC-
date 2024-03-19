@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 using namespace std;
+//g++ -o Ejecutable Ejecutable.cpp
 
 class Nequi{
 
@@ -15,7 +16,7 @@ class Nequi{
 
     };
 
-    public:
+ 
     bool accesoApp(){
 
         while( i > 0){
@@ -36,10 +37,10 @@ class Nequi{
 
             cout << "Clave o usuario incorrectos" << endl;
             cout << "Ingrese un usuario y clave validos" << endl;
-            cout << "Tiene " << i << "intentos mas" << endl;
+            cout << "Tiene " << i << " intentos mas" << endl;
 
         }
-        return false;
+
     }
     
     string recarga(){
