@@ -40,7 +40,7 @@ class Nequi{
             cout << "Tiene " << i << " intentos mas" << endl;
 
         }
-
+        return false;
     }
     
     string recarga(){
