@@ -72,7 +72,9 @@ class Nequi{
 
             }
             if(opcion == 2){
-                
+                cout << "Dirigase al corresponsal mas cercano" << endl;
+                cout << "los podra encontrar en el siguiente link: " << endl;
+                cout << "https://www.bancolombia.com/puntos-de-atencion/buscar-en-mapa" << endl;
             }
             if(opcion == 3){
                 
