@@ -2,14 +2,14 @@
 #include <time.h>
 #include <stdlib.h>
 using namespace std;
-//g++ -o Ejecutable Ejecutable.cpp
+
 
 class Nequi{
 
     private:
     int opcion,i = 3;
     float saldoCuenta = 0, valor = 0, colchon1 = 0, bolsillo1 = 0, arrayMovimientos[3];
-    string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave, usuario;
+    string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave = "1234", usuario = "3214459100";
 
     public:
     Nequi (){
@@ -22,11 +22,12 @@ class Nequi{
     bool accesoApp(){
 
         while( i > 0){
+            /*
             cout << "Ingrese su usuario: " << endl;
             cin >> usuario;
 
             cout << "Ingrese su clave: " << endl;
-            cin >> clave;
+            cin >> clave;*/
 
             for (int i = 0; i < 10; i++){
                 
@@ -48,7 +49,7 @@ class Nequi{
     string recarga(){
 
         int numCuenta, cedula, opBanco;
-        string listaBancos[5] = {"AVVILLAS","BBVA","Colpatria","Davivienda","Itau"}, codigoRegalo;
+        string listaBancos[5] = {"1. AVVILLAS","2. BBVA","3. Colpatria","4. Davivienda","5. Itau"}, codigoRegalo;
 
         cout << "ingrese la opcion que desea para recargar: " << endl;
         cout << "1. Plata al toque" << endl;
@@ -67,7 +68,7 @@ class Nequi{
                 cin >> cedula;
                 while (true)
                 {
-                    cout << "Ingrese el valor a enviar: " << endl;
+                    cout << "Ingrese el valor a recargar: " << endl;
                     cin >> valor;
                     if(valor <= 0){
                         cout << "Ingrese un valor valido" << endl;
@@ -91,18 +92,19 @@ class Nequi{
                 
                 cout << "Bienvenido a recarga desde otro banco" << endl;
                 cout << "Eliga el banco que desea: " << endl;
-                for (int i = 1; i < listaBancos->length(); i++)
+                for (int i = 0; i < 5; i++)
                 {
-                    cout << i << listaBancos[i] << endl;
+                    cout << listaBancos[i] << endl;
                 }
                 cin >> opBanco;
+                opBanco -= 1;
                 cout << "Ingrese el numero de cuenta para su banco: " << endl;
                 cin >> numCuenta;
                 cout << "Ingrese su numero de cedula: " << endl;
                 cin >> cedula;
                 while (true)
                 {
-                    cout << "Ingrese el valor a enviar: " << endl;
+                    cout << "Ingrese el valor a recargar: " << endl;
                     cin >> valor;
                     if(valor <= 0){
                         cout << "Ingrese un valor valido" << endl;
@@ -121,7 +123,7 @@ class Nequi{
                 cin >> codigoRegalo;
                 while (true)
                 {
-                    cout << "Ingrese el valor a enviar: " << endl;
+                    cout << "Ingrese el valor a recargar: " << endl;
                     cin >> valor;
                     if(valor <= 0){
                         cout << "Ingrese un valor valido" << endl;
@@ -172,8 +174,8 @@ class Nequi{
     
     void meta(){
         string nombreMeta;
-        float valorMeta;
-        int dia, mes, anio,diasMeta;
+        float valorMeta, valorCuota;
+        int dia, mes, anio,cuotas;
 
         cout << "Crea tu meta" << endl;
 
@@ -190,11 +192,31 @@ class Nequi{
         cin >> mes;
         cout << "El año: ";
         cin >> anio;
-
-        cout << "Desea descontar del disponible? 1. si / 2.no";
-        cin >> opcion;
-        if(opcion == 1){
-            saldoCuenta -= (valorMeta/10);
+        cout << "A cuantas cuotas desea la meta?" << endl;
+        cin >> cuotas;
+        valorCuota = valorMeta / cuotas;
+        cout << "Las cuotas serian de " << valorCuota << endl;
+        while (true){
+            cout << "Desea descontar del disponible? 1. si / 2.no";
+            cin >> opcion;
+            if(opcion == 1){
+                
+                if(valorCuota > saldoCuenta){
+                    cout << "Es imposible descontar del disponible " << endl;
+                    break;
+                }
+                else if(valorCuota < saldoCuenta){
+                    cout << "Se descontaron " << valorCuota << "del disponible " << endl;
+                    break;
+                }
+            }
+            if(opcion == 2){
+                cout << "Tu bolsillo a sido creado" << endl;
+            }
+            else{
+                cout << "Ingrese una opcion valida " << endl;
+                break;
+            }
         }
     }
     
@@ -253,12 +275,11 @@ class Nequi{
                     cout << "Ingrese un valor valido" << endl;
                     cin >> valor;
                     if (valor <= saldoCuenta){
-                        saldoCuenta -= valor;
                         break;
                     }
                 }
+                saldoCuenta -= valor;
                 cout << "El codigo para retirar es: " << random << endl;
-                cout << "su nuevo saldo en bolsillo es " << saldoCuenta << endl;
 
             }
             if (opcion == 2){
@@ -268,10 +289,10 @@ class Nequi{
                     cout << "Ingrese un valor valido" << endl;
                     cin >> valor;
                     if (valor <= bolsillo1){
-                        bolsillo1 -= valor;
                         break;
                     }
                 }
+                bolsillo1 -= valor;
                 cout << "El codigo para retirar es: " << random << endl;
                 cout << "su nuevo saldo en bolsillo es " << bolsillo1 << endl;
             }
