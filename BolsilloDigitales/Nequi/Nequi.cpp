@@ -15,7 +15,9 @@ class Nequi{
     Nequi (){
 
     };
-
+    float getValor(){
+        return valor;
+    }
  
     bool accesoApp(){
 
@@ -83,6 +85,7 @@ class Nequi{
                 cout << "Dirigase al corresponsal mas cercano" << endl;
                 cout << "los podra encontrar en el siguiente link: " << endl;
                 cout << "https://www.bancolombia.com/puntos-de-atencion/buscar-en-mapa" << endl;
+                break;
             }
             if(opcion == 3){
                 
@@ -140,7 +143,7 @@ class Nequi{
                 cout << "ingrese una opcion valida" << endl;
             }
         }
-
+        return "";
     }
     
     void colchon(){
@@ -150,9 +153,13 @@ class Nequi{
         while (true){
         
             cout << "Cuanto vas a meter? " << endl;
+            cout << "-1. para salir" << endl;
             cin >> valor;
             if(valor < saldoCuenta){
                 cout << "Ingrese un valor valido" << endl;
+            }
+            if( valor == -1){
+                break;
             }
             else{
                 colchon1 = valor;
@@ -201,11 +208,16 @@ class Nequi{
         cin >> nombreBolsillo;
 
         cout << "¿Cuanto vas a dejar?" << endl;
+        cout << "-1. para salir" << endl;
         cin >> valorBolsillo;
+        
         while (true)
-        {
+        {   
             if(valorBolsillo < saldoCuenta){
                 cout << "Ingrese un valor valido" << endl;
+            }
+            else if(valor == -1){
+                break;
             }
             else{
                 bolsillo1 = valorBolsillo;

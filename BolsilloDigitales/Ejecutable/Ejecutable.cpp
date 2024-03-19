@@ -12,9 +12,11 @@ int main(){
 
     if(user1.accesoApp() == true){
         while (true)
-        {
+        {   
+            cout << "su valor disponible es: " << user1.getValor() << endl; 
             cout << "Eliga la opcion para la funcion que desea: " << endl;
             cin >> opcion;
+            
 
             if(opcion == 1){
                 user1.recarga();
@@ -33,6 +35,9 @@ int main(){
             }
             if(opcion == 6){
                 break;
+            }
+            if(opcion < 1 || opcion  > 6){
+                cout << "Ingrese una opcion valida "<< endl;
             }
         }
     }
