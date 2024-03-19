@@ -5,7 +5,7 @@ class Nequi{
 
     private:
     int opcion,i = 3;
-    float saldoCuenta;
+    float saldoCuenta = 0, valor,colchon;
     string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave, usuario;
 
     public:
@@ -41,7 +41,6 @@ class Nequi{
     string recarga(){
 
         int numCuenta, cedula, opBanco;
-        float valor;
         string listaBancos[5] = {"AVVILLAS","BBVA","Colpatria","Davivienda","Itau"}, codigoRegalo;
 
         cout << "ingrese la opcion que desea para recargar: " << endl;
@@ -139,6 +138,24 @@ class Nequi{
 
     }
     void colchon(){
+    
+        cout << "Tu colchon " << endl;
+        
+        while (true){
+        
+            cout << "Cuanto vas a meter? " << endl;
+            cin >> valor;
+            if(valor < saldoCuenta){
+                cout << "Ingrese un valor valido" << endl;
+            }
+            else{
+                colchon = valor;
+                saldoCuenta -= colchon;
+            }
+            
+        }
+        
+
 
     }
     void meta(){
