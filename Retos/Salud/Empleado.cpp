@@ -27,18 +27,6 @@ class Empleado : public Persona{
 
     }
 
-    void calcularHonorarios(){
-        honorarios = (valorHora*horasTrabajadas);
-        reteica = (honorarios * 0.966)/100;
-        honorarios = honorarios - reteica;
-    }
-
-    int mayorEdad(){
-        edad = anoActual - fechaNacimiento;
-        return edad;
-        
-    }
-
     void mostraDatos(){
 
         cout << "Tipo de documento: " << getTipoDoc() << endl;
@@ -51,6 +39,20 @@ class Empleado : public Persona{
         cout << "Total a pagar: " << honorarios << endl;
 
     }
+    
+    void calcularHonorarios(){
+        honorarios = (valorHora*horasTrabajadas);
+        reteica = (honorarios * 0.966)/100;
+        honorarios = honorarios - reteica;
+    }
+
+    int mayorEdad(){
+        edad = anoActual - fechaNacimiento;
+        return edad;
+        
+    }
+
+    
 
 
 
