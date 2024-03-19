@@ -11,7 +11,12 @@ class Nequi{
     int opcion,i = 3;
     float saldoCuenta = 0, valor = 0, colchon1 = 0, bolsillo1 = 0;
     string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave = "1234", usuario = "3214459100";
-    list <string> Movimientos1;
+    list <string> movimientosTipo;
+    list <float> movimientosValor;
+
+    float *ptrmovimientosValor;
+    string *ptrMovimientosTipo;
+
 
     public:
     Nequi (){
@@ -21,7 +26,19 @@ class Nequi{
     float getSaldoCuenta(){
         return saldoCuenta;
     }
- 
+    
+    float getValor(){
+        return valor;
+    }
+
+    float getMovimientosValor(){
+        return  *ptrmovimientosValor;
+    }
+
+    string getMovimientosTipo(){
+        return  *ptrMovimientosTipo;
+    }
+
     bool accesoApp(){
 
         while( i > 0){
@@ -160,6 +177,8 @@ class Nequi{
                 cout << "ingrese una opcion valida" << endl;
             }
         }
+
+
         return "";
     }
     
@@ -321,11 +340,26 @@ class Nequi{
 
     }
     
-    void movimientos(){
-        
+    void agregarMovimiento(string tipo) {
+    
+        movimientosTipo.push_back(tipo);
 
+        // Verificar si hay más de 3 movimientos
+        if (movimientosTipo.size() > 3) {
+            // Eliminar el movimiento más antiguo (el primero en la lista)
+            movimientosTipo.pop_front();
+        }
+    }
+    
+    void agregarMovimiento1(float monto) {
+    
+        movimientosValor.push_back(monto);
 
-
+        // Verificar si hay más de 3 movimientos
+        if (movimientosValor.size() > 3) {
+            // Eliminar el movimiento más antiguo (el primero en la lista)
+            movimientosValor.pop_front();
+        }
     }
 
 
