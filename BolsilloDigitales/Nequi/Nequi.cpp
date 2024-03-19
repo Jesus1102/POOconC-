@@ -41,7 +41,7 @@ class Nequi{
 
         int numCuenta, cedula, opBanco;
         float valor;
-        string listaBancos[5] = {"AVVILLAS","BBVA","Colpatria","Davivienda","Itau"};
+        string listaBancos[5] = {"AVVILLAS","BBVA","Colpatria","Davivienda","Itau"}, codigoRegalo;
 
         cout << "ingrese la opcion que desea para recargar: " << endl;
         cout << "1. Plata al toque" << endl;
@@ -80,7 +80,7 @@ class Nequi{
             }
             if(opcion == 3){
                 
-                cout << "Bienvenido a Plata al toque" << endl;
+                cout << "Bienvenido a recarga desde otro banco" << endl;
                 cout << "Eliga el banco que desea: " << endl;
                 for (int i = 1; i < listaBancos->length(); i++)
                 {
@@ -103,14 +103,19 @@ class Nequi{
                     }
 
                 }
-                
-
 
             }
             if(opcion == 4){
+                cout << "Bienvenido a codigo de regalo" << endl;
+                cout << "Ingrese el codigo de regalo" << endl;
+                cin >> codigoRegalo;
+
+                return "Recarga realizada con exito";
                 
             }
-            if(opcion == 5){
+            if(opcion == 0){
+
+                return "";
                 
             }
         }
