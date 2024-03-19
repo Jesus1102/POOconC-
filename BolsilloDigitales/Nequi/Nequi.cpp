@@ -7,13 +7,15 @@ class Nequi{
 
     private:
     int opcion,i = 3;
-    float saldoCuenta = 0, valor = 0, colchon = 0, bolsillo = 0;
+    float saldoCuenta = 0, valor = 0, colchon1 = 0, bolsillo1 = 0, arrayMovimientos[3];
     string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave, usuario;
 
     public:
     Nequi (){
 
     };
+
+    public:
     bool accesoApp(){
 
         while( i > 0){
@@ -27,7 +29,6 @@ class Nequi{
                 
                 if (clave == clavesRegistradas[i] && usuario == usuariosRegistrados[i]){
                     return true;
-
                 }                
 
             }
@@ -37,9 +38,10 @@ class Nequi{
             cout << "Ingrese un usuario y clave validos" << endl;
             cout << "Tiene " << i << "intentos mas" << endl;
 
-        };
+        }
+        return false;
     }
-
+    
     string recarga(){
 
         int numCuenta, cedula, opBanco;
@@ -152,12 +154,11 @@ class Nequi{
                 cout << "Ingrese un valor valido" << endl;
             }
             else{
-                colchon = valor;
-                saldoCuenta -= colchon;
+                colchon1 = valor;
+                saldoCuenta -= colchon1;
             }
             
         }
-        
     }
     
     void meta(){
@@ -206,7 +207,7 @@ class Nequi{
                 cout << "Ingrese un valor valido" << endl;
             }
             else{
-                bolsillo = valorBolsillo;
+                bolsillo1 = valorBolsillo;
                 saldoCuenta -= valorBolsillo;
             }
         }
@@ -249,6 +250,9 @@ class Nequi{
     
     void movimientos(){
         
+
+
+
     }
 
 
