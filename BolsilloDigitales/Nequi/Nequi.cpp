@@ -39,8 +39,9 @@ class Nequi{
 
     string recarga(){
 
-        int numCuenta, cedula;
+        int numCuenta, cedula, opBanco;
         float valor;
+        string listaBancos[5] = {"AVVILLAS","BBVA","Colpatria","Davivienda","Itau"};
 
         cout << "ingrese la opcion que desea para recargar: " << endl;
         cout << "1. Plata al toque" << endl;
@@ -72,12 +73,39 @@ class Nequi{
 
             }
             if(opcion == 2){
+                cout << "Bienvenido a recagar con efectivo" << endl;
                 cout << "Dirigase al corresponsal mas cercano" << endl;
                 cout << "los podra encontrar en el siguiente link: " << endl;
                 cout << "https://www.bancolombia.com/puntos-de-atencion/buscar-en-mapa" << endl;
             }
             if(opcion == 3){
                 
+                cout << "Bienvenido a Plata al toque" << endl;
+                cout << "Eliga el banco que desea: " << endl;
+                for (int i = 1; i < listaBancos->length(); i++)
+                {
+                    cout << i << listaBancos[i] << endl;
+                }
+                cin >> opBanco;
+                cout << "Ingrese el numero de cuenta para su banco: " << endl;
+                cin >> numCuenta;
+                cout << "Ingrese su numero de cedula: " << endl;
+                cin >> cedula;
+                while (true)
+                {
+                    cout << "Ingrese el valor a enviar: " << endl;
+                    cin >> valor;
+                    if(valor <= 0){
+                        cout << "Ingrese un valor valido" << endl;
+                    }
+                    else{
+                        return "Recarga realizada con exito";
+                    }
+
+                }
+                
+
+
             }
             if(opcion == 4){
                 
