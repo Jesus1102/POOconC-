@@ -7,7 +7,7 @@ class Nequi{
 
     private:
     int opcion,i = 3;
-    float saldoCuenta = 0, valor, colchon, bolsillo;
+    float saldoCuenta = 0, valor = 0, colchon = 0, bolsillo = 0;
     string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave, usuario;
 
     public:

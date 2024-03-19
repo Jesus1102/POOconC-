@@ -6,6 +6,13 @@ using namespace std;
 
 int main(){
 
+    Nequi user1;
+
+    while(user1.accesoApp() == true){
+
+        
+
+    }
 
     return 0;
 }
