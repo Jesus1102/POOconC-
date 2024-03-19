@@ -5,9 +5,10 @@ class Nequi{
 
     private:
     int opcion,i = 3;
+    float saldoCuenta;
     string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave, usuario;
 
-
+    public:
     Nequi (){
 
     };
@@ -66,6 +67,7 @@ class Nequi{
                         cout << "Ingrese un valor valido" << endl;
                     }
                     else{
+                        saldoCuenta = valor;
                         return "Recarga realizada con exito";
                     }
 
@@ -99,6 +101,7 @@ class Nequi{
                         cout << "Ingrese un valor valido" << endl;
                     }
                     else{
+                        saldoCuenta = valor;
                         return "Recarga realizada con exito";
                     }
 
@@ -109,14 +112,28 @@ class Nequi{
                 cout << "Bienvenido a codigo de regalo" << endl;
                 cout << "Ingrese el codigo de regalo" << endl;
                 cin >> codigoRegalo;
+                while (true)
+                {
+                    cout << "Ingrese el valor a enviar: " << endl;
+                    cin >> valor;
+                    if(valor <= 0){
+                        cout << "Ingrese un valor valido" << endl;
+                    }
+                    else{
+                        saldoCuenta = valor;
+                        return "Recarga realizada con exito";
+                    }
 
-                return "Recarga realizada con exito";
+                }
                 
             }
             if(opcion == 0){
 
                 return "";
                 
+            }
+            else{
+                cout << "ingrese una opcion valida" << endl;
             }
         }
 
