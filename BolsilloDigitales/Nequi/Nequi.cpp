@@ -5,7 +5,7 @@ class Nequi{
 
     private:
     int opcion,i = 3;
-    float saldoCuenta = 0, valor,colchon;
+    float saldoCuenta = 0, valor, colchon, bolsillo;
     string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave, usuario;
 
     public:
@@ -137,6 +137,7 @@ class Nequi{
         }
 
     }
+    
     void colchon(){
     
         cout << "Tu colchon " << endl;
@@ -155,13 +156,56 @@ class Nequi{
             
         }
         
-
-
     }
+    
     void meta(){
+        string nombreMeta;
+        float valorMeta;
+        int dia, mes, anio,diasMeta;
 
+        cout << "Crea tu meta" << endl;
+
+        cout << "Ingresa el nombre de la meta:" << endl;
+        cin >> nombreMeta;
+
+        cout << "Ingresa el valor de tu meta: " << endl;
+        cin >> valorMeta;
+
+        cout << "Cuando quieres lograrlo? " << endl;
+        cout << "El dia: ";
+        cin >> dia;
+        cout << "El mes: ";
+        cin >> mes;
+        cout << "El año: ";
+        cin >> anio;
+
+        cout << "Desea descontar del disponible? 1. si / 2.no";
+        cin >> opcion;
+        if(opcion == 1){
+            saldoCuenta -= (valorMeta/10);
+        }
     }
+    
     void bolsillo(){
+        
+        string nombreBolsillo;
+        float valorBolsillo;
+
+        cout << "Crea tu primer bolsillo " << endl;
+
+        cout << "Nombre del bolsillo " << endl;
+        cin >> nombreBolsillo;
+
+        cout << "¿Cuanto vas a dejar?" << endl;
+        cin >> valorBolsillo;
+
+        if(valorBolsillo < saldoCuenta){
+            cout << "Ingrese un valor valido" << endl;
+        }
+        else{
+            colchon = valor;
+            saldoCuenta -= colchon;
+        }
 
     }
     void sacarPlata(){
