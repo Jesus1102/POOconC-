@@ -9,7 +9,7 @@ class Nequi{
 
     private:
     int opcion,i = 3;
-    float saldoCuenta = 0, valor = 0, colchon1 = 0, bolsillo1 = 0, arrayMovimientos[3];
+    float saldoCuenta = 0, valor = 0, colchon1 = 0, bolsillo1 = 0;
     string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave = "1234", usuario = "3214459100";
     list <string> Movimientos1;
 
@@ -17,7 +17,7 @@ class Nequi{
     Nequi (){
 
     };
-    
+
     float getSaldoCuenta(){
         return saldoCuenta;
     }
@@ -82,14 +82,26 @@ class Nequi{
                     }
 
                 }
-
             }
             if(opcion == 2){
                 cout << "Bienvenido a recagar con efectivo" << endl;
                 cout << "Dirigase al corresponsal mas cercano" << endl;
                 cout << "los podra encontrar en el siguiente link: " << endl;
                 cout << "https://www.bancolombia.com/puntos-de-atencion/buscar-en-mapa" << endl;
-                break;
+                while (true)
+                {
+                    cout << "Ingrese el valor a recargar: " << endl;
+                    cin >> valor;
+                    if(valor <= 0){
+                        cout << "Ingrese un valor valido" << endl;
+                    }
+                    else{
+                        saldoCuenta += valor;
+                        return "Recarga realizada con exito";
+                    }
+
+                }
+
             }
             if(opcion == 3){
                 
