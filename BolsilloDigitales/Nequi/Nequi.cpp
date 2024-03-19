@@ -1,4 +1,6 @@
 #include <iostream>
+#include <time.h>
+#include <stdlib.h>
 using namespace std;
 
 class Nequi{
@@ -210,9 +212,34 @@ class Nequi{
         }
 
     }
-    void sacarPlata(){
+    
+    void sacarPlata (){
+
+        srand(time(NULL));
+
+        int opcion, random;
+        random = 100000+rand()%(999999+1-100000);
+
+        cout << "Opciones para sacar" << endl;
+        cout << "1. Para cajero bancolombia" << endl;
+        cout << "2. Para punto fisico (Corresponsales y puntos nequi)" << endl;
+        cout << "3. Para conocer los lugares de retiro " << endl;   
+        cin >> opcion;
+    
+        if (opcion == 1 || opcion == 2){
+
+            cout << "El codigo para retirar es: " << random << endl;
+
+        }
+        else if (opcion == 3)
+        {   
+            cout << "Copie este link para saber sus puntos de retiro cercano " << endl;
+            cout << "https://www.bancolombia.com/puntos-de-atencion/buscar-en-mapa";
+        }
+    
 
     }
+    
     void movimientos(){
         
     }
