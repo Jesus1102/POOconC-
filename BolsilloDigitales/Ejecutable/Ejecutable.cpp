@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
 
-    int opcion = 0;
+    int opcion;
     Nequi user1;
     
 
@@ -16,7 +16,7 @@ int main(){
             cout << "su valor disponible es: " << user1.getSaldoCuenta() << endl; 
             cout << "Eliga la opcion para la funcion que desea: " << endl;
             cin >> opcion;
-            
+            /*
             switch (opcion)
             {
             case 1:
@@ -50,12 +50,13 @@ int main(){
                 break;
             case 7:
                 cout << "hi";
+                break;
             default:
                 cout << "no valida" << endl;
                 break;
             }
+            */
             
-            /*
             if(opcion == 1){
                 user1.recarga();
                 user1.agregarMovimientoTipo("Recarga");
@@ -87,13 +88,12 @@ int main(){
             }
             else if(opcion == 7){
                 cout << "hi";
-                cout << user1.getSaldoCuenta() << endl; 
-            }
-            else if(opcion <= 0 || opcion >= 8){
-                cout << "Ingrese una opcion valida "<< endl;
                 
             }
-            */
+            else {
+                cout << "Ingrese una opcion valida "<< endl;
+            }
+            
         }
     }
 
