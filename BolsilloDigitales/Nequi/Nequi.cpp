@@ -191,17 +191,18 @@ class Nequi{
             cout << "Cuanto vas a meter? " << endl;
             cout << "-1. para salir" << endl;
             cin >> valor;
-            if(valor > saldoCuenta){
+            if(valor > saldoCuenta || valor < 0 && valor != -1){
                 cout << "Ingrese un valor valido" << endl;
             }
-            else{
+            else if( valor == -1){
+                break;
+            }
+            else if (valor < saldoCuenta){
                 colchon1 = valor;
                 saldoCuenta -= colchon1;
                 break;
             }
-            if( valor == -1){
-                break;
-            }
+            
             
         }
     }
@@ -270,13 +271,13 @@ class Nequi{
         
         while (true)
         {   
-            if(valorBolsillo > saldoCuenta){
+            if(valorBolsillo > saldoCuenta || valorBolsillo < 0 && valorBolsillo != -1){
                 cout << "Ingrese un valor valido" << endl;
             }
             else if(valor == -1){
                 break;
             }
-            else{
+            else if (valorBolsillo < saldoCuenta){
                 bolsillo1 = valorBolsillo;
                 saldoCuenta -= valorBolsillo;
                 break;
@@ -340,7 +341,7 @@ class Nequi{
 
     }
     
-    void agregarMovimiento(string tipo) {
+    void agregarMovimientoTipo(string tipo) {
     
         movimientosTipo.push_back(tipo);
 
@@ -351,7 +352,7 @@ class Nequi{
         }
     }
     
-    void agregarMovimiento1(float monto) {
+    void agregarMovimientoValor(float monto) {
     
         movimientosValor.push_back(monto);
 
