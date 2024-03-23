@@ -133,24 +133,32 @@ class Nequi{
                 {
                     cout << listaBancos[i] << endl;
                 }
-                cin >> opBanco;
-                opBanco -= 1;
-                cout << "Ingrese el numero de cuenta para su banco: " << endl;
-                cin >> numCuenta;
-                cout << "Ingrese su numero de cedula: " << endl;
-                cin >> cedula;
-                while (true)
-                {
-                    cout << "Ingrese el valor a recargar: " << endl;
-                    cin >> valor;
-                    if(valor <= 0){
-                        cout << "Ingrese un valor valido" << endl;
+                while (true){
+                    cin >> opBanco;
+                    if(opBanco > 0 && opBanco < 6){
+                        opBanco -= 1;
+                        cout << "Ingrese el numero de cuenta para su banco: " << endl;
+                        cin >> numCuenta;
+                        cout << "Ingrese su numero de cedula: " << endl;
+                        cin >> cedula;
+                        while (true)
+                        {
+                            cout << "Ingrese el valor a recargar: " << endl;
+                            cin >> valor;
+                            if(valor <= 0){
+                                cout << "Ingrese un valor valido" << endl;
+                            }
+                            else{
+                                saldoCuenta += valor;
+                                return "Recarga realizada con exito";
+                            }
+
+                        }
                     }
                     else{
-                        saldoCuenta += valor;
-                        return "Recarga realizada con exito";
+                        cout << "Ingrese una opcion valida " << endl;
+                        break;
                     }
-
                 }
 
             }
@@ -269,7 +277,7 @@ class Nequi{
 
         cout << "Nombre del bolsillo " << endl;
         cin >> nombreBolsillo;
-        
+
         while (true)
         {   
             cout << "¿Cuanto vas a dejar?" << endl;
@@ -278,7 +286,7 @@ class Nequi{
             
             if(valorBolsillo > saldoCuenta || valorBolsillo < 0 && valorBolsillo != -1){
                 cout << "Ingrese un valor valido" << endl;
-                break;
+                ;
             }
             else if(valor == -1){
                 break;
