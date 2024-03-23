@@ -9,13 +9,10 @@ class Nequi{
 
     private:
     int opcion,i = 3;
-    float saldoCuenta = 0, valor = 0, colchon1 = 0, bolsillo1 = 0;
+    float saldoCuenta = 0, valor = 0, colchon1 = 0, bolsillo1 = 0, valorBolsillo, valorMeta, valorRetiro;
     string clavesRegistradas[10] = {"1234","4567","7890"}, usuariosRegistrados[10] = {"3214459100","3214459300","3214459200"}, clave = "1234", usuario = "3214459100";
     list <string> movimientosTipo;
     list <float> movimientosValor;
-
-    float *ptrmovimientosValor;
-    string *ptrMovimientosTipo;
 
 
     public:
@@ -31,12 +28,17 @@ class Nequi{
         return valor;
     }
 
-    float getMovimientosValor(){
-        return  *ptrmovimientosValor;
+    float getValorColchon(){
+        return colchon1;
     }
-
-    string getMovimientosTipo(){
-        return  *ptrMovimientosTipo;
+    float getValorMeta(){
+        return valorMeta;
+    }
+    float getValorBolsillo(){
+        return bolsillo1;
+    }
+    float getValorRetiro(){
+        return valorRetiro;
     }
 
     bool accesoApp(){
@@ -209,7 +211,7 @@ class Nequi{
     
     void meta(){
         string nombreMeta;
-        float valorMeta, valorCuota;
+        float valorCuota;
         int dia, mes, anio,cuotas;
 
         cout << "Crea tu meta" << endl;
@@ -258,7 +260,6 @@ class Nequi{
     void bolsillo(){
         
         string nombreBolsillo;
-        float valorBolsillo;
 
         cout << "Crea tu primer bolsillo " << endl;
 
@@ -305,29 +306,29 @@ class Nequi{
             cin >> opcion;
             if (opcion == 1){
                 cout << "Cuanto desea sacar? " << endl;
-                cin >> valor;
-                while(valor > saldoCuenta){
+                cin >> valorRetiro;
+                while(valorRetiro > saldoCuenta){
                     cout << "Ingrese un valor valido" << endl;
-                    cin >> valor;
-                    if (valor <= saldoCuenta){
+                    cin >> valorRetiro;
+                    if (valorRetiro <= saldoCuenta){
                         break;
                     }
                 }
-                saldoCuenta -= valor;
+                saldoCuenta -= valorRetiro;
                 cout << "El codigo para retirar es: " << random << endl;
 
             }
             if (opcion == 2){
                 cout << "Cuanto desea sacar? " << endl;
-                cin >> valor;
-                while(valor > bolsillo1){
+                cin >> valorRetiro;
+                while(valorRetiro > bolsillo1){
                     cout << "Ingrese un valor valido" << endl;
-                    cin >> valor;
-                    if (valor <= bolsillo1){
+                    cin >> valorRetiro;
+                    if (valorRetiro <= bolsillo1){
                         break;
                     }
                 }
-                bolsillo1 -= valor;
+                bolsillo1 -= valorRetiro;
                 cout << "El codigo para retirar es: " << random << endl;
                 cout << "su nuevo saldo en bolsillo es " << bolsillo1 << endl;
             }
@@ -342,7 +343,8 @@ class Nequi{
     }
     
     void agregarMovimientoTipo(string tipo) {
-    
+        
+
         movimientosTipo.push_back(tipo);
 
         // Verificar si hay más de 3 movimientos
@@ -363,6 +365,20 @@ class Nequi{
         }
     }
 
+    void imprimirMovimientoTipo(){
 
+        for(const auto & Tipo: movimientosTipo){
+            cout << Tipo << " " ;
+        }
+        cout << endl;
+    }
+
+    void imprimirMovimientoValor(){
+
+        for(const auto & Tipo: movimientosValor){
+            cout << Tipo << " " ;
+        }
+        cout << endl;
+    }
 
 };

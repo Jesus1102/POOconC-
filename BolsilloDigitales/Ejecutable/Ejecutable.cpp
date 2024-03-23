@@ -65,33 +65,35 @@ int main(){
             else if(opcion == 2){
                 user1.colchon();
                 user1.agregarMovimientoTipo("Colchon");
-                user1.agregarMovimientoValor(user1.getValor());
+                user1.agregarMovimientoValor(user1.getValorColchon());
             }
             else if(opcion == 3){
                 user1.meta();
                 user1.agregarMovimientoTipo("Meta");
-                user1.agregarMovimientoValor(user1.getValor());
+                user1.agregarMovimientoValor(user1.getValorMeta());
             }
             else if(opcion == 4){
                 user1.bolsillo();
                 user1.agregarMovimientoTipo("Bolsillo");
-                user1.agregarMovimientoValor(user1.getValor());
+                user1.agregarMovimientoValor(user1.getValorBolsillo());
             }
             else if(opcion == 5){
                 user1.sacarPlata();
                 user1.agregarMovimientoTipo("Sacar plata");
-                user1.agregarMovimientoValor(user1.getValor());
+                user1.agregarMovimientoValor(user1.getValorRetiro());
             }
             else if(opcion == 6){
-                user1.getMovimientosTipo();
-                user1.getMovimientosValor();
+                user1.imprimirMovimientoTipo();
+                cout << endl;
+                user1.imprimirMovimientoValor();
             }
             else if(opcion == 7){
-                cout << "hi";
-                
+                cout << "Gracias por usar Nequi" << endl;
+                break;
             }
             else {
                 cout << "Ingrese una opcion valida "<< endl;
+                
             }
             
         }
