@@ -31,12 +31,15 @@ class Nequi{
     float getValorColchon(){
         return colchon1;
     }
+    
     float getValorMeta(){
         return valorMeta;
     }
+    
     float getValorBolsillo(){
         return bolsillo1;
     }
+    
     float getValorRetiro(){
         return valorRetiro;
     }
@@ -195,6 +198,7 @@ class Nequi{
             cin >> valor;
             if(valor > saldoCuenta || valor < 0 && valor != -1){
                 cout << "Ingrese un valor valido" << endl;
+                break;
             }
             else if( valor == -1){
                 break;
@@ -265,15 +269,16 @@ class Nequi{
 
         cout << "Nombre del bolsillo " << endl;
         cin >> nombreBolsillo;
-
-        cout << "¿Cuanto vas a dejar?" << endl;
-        cout << "-1. para salir" << endl;
-        cin >> valorBolsillo;
         
         while (true)
         {   
+            cout << "¿Cuanto vas a dejar?" << endl;
+            cout << "-1. para salir" << endl;
+            cin >> valorBolsillo;
+            
             if(valorBolsillo > saldoCuenta || valorBolsillo < 0 && valorBolsillo != -1){
                 cout << "Ingrese un valor valido" << endl;
+                break;
             }
             else if(valor == -1){
                 break;
