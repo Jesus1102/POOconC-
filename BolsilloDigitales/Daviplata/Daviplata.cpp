@@ -1,4 +1,5 @@
 #include <iostream>
+#include <list>
 #include "./BolsilloDigitales/Nequi/Nequi.cpp"
 using namespace std;
 
