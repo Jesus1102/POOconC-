@@ -18,53 +18,52 @@ int main(){
 
         if (opApp == 1){
             if(user1.accesoApp() == true){
-            while (true)
-            {   
-                cout << "su valor disponible es: " << user1.getSaldoCuenta() << endl; 
-                cout << "Eliga la opcion para la funcion que desea: " << endl;
-                cin >> opcion;
-                
-                if(opcion == 1){
-                    user1.recarga();
-                    user1.agregarMovimientoTipo("Recarga");
-                    user1.agregarMovimientoValor(user1.getValor());
+                while (true)
+                {   
+                    cout << "su valor disponible es: " << user1.getSaldoCuenta() << endl; 
+                    cout << "Eliga la opcion para la funcion que desea: " << endl;
+                    cin >> opcion;
+                    
+                    if(opcion == 1){
+                        user1.recarga();
+                        user1.agregarMovimientoTipo("Recarga");
+                        user1.agregarMovimientoValor(user1.getValor());
+                    }
+                    else if(opcion == 2){
+                        user1.colchon();
+                        user1.agregarMovimientoTipo("Colchon");
+                        user1.agregarMovimientoValor(user1.getValorColchon());
+                    }
+                    else if(opcion == 3){
+                        user1.meta();
+                        user1.agregarMovimientoTipo("Meta");
+                        user1.agregarMovimientoValor(user1.getValorMeta());
+                    }
+                    else if(opcion == 4){
+                        user1.bolsillo();
+                        user1.agregarMovimientoTipo("Bolsillo");
+                        user1.agregarMovimientoValor(user1.getValorBolsillo());
+                    }
+                    else if(opcion == 5){
+                        user1.sacarPlata();
+                        user1.agregarMovimientoTipo("Sacar plata");
+                        user1.agregarMovimientoValor(user1.getValorRetiro());
+                    }
+                    else if(opcion == 6){
+                        user1.imprimirMovimientoTipo();
+                        cout << endl;
+                        user1.imprimirMovimientoValor();
+                    }
+                    else if(opcion == 7){
+                        cout << "Gracias por usar Nequi" << endl;
+                        break;
+                    }
+                    else {
+                        cout << "Ingrese una opcion valida "<< endl;
+                        break;
+                    }
                 }
-                else if(opcion == 2){
-                    user1.colchon();
-                    user1.agregarMovimientoTipo("Colchon");
-                    user1.agregarMovimientoValor(user1.getValorColchon());
-                }
-                else if(opcion == 3){
-                    user1.meta();
-                    user1.agregarMovimientoTipo("Meta");
-                    user1.agregarMovimientoValor(user1.getValorMeta());
-                }
-                else if(opcion == 4){
-                    user1.bolsillo();
-                    user1.agregarMovimientoTipo("Bolsillo");
-                    user1.agregarMovimientoValor(user1.getValorBolsillo());
-                }
-                else if(opcion == 5){
-                    user1.sacarPlata();
-                    user1.agregarMovimientoTipo("Sacar plata");
-                    user1.agregarMovimientoValor(user1.getValorRetiro());
-                }
-                else if(opcion == 6){
-                    user1.imprimirMovimientoTipo();
-                    cout << endl;
-                    user1.imprimirMovimientoValor();
-                }
-                else if(opcion == 7){
-                    cout << "Gracias por usar Nequi" << endl;
-                    break;
-                }
-                else {
-                    cout << "Ingrese una opcion valida "<< endl;
-                    break;
-                }
-                
             }
-        }
         }
         else if (opApp == 2)
         {
@@ -107,6 +106,7 @@ int main(){
                         break;
                     }
                 }
+            }
         }
         else {
             cout << "ingrese una opcion valida" << endl;
