@@ -8,7 +8,7 @@ int main(){
 
     int opcion, opApp;
     Nequi user1;
-    Davipalta User2;
+    Davipalta user2;
     
     
     while (true){
@@ -23,46 +23,6 @@ int main(){
                 cout << "su valor disponible es: " << user1.getSaldoCuenta() << endl; 
                 cout << "Eliga la opcion para la funcion que desea: " << endl;
                 cin >> opcion;
-                /*
-                switch (opcion)
-                {
-                case 1:
-                    user1.recarga();
-                    user1.agregarMovimientoTipo("Recarga");
-                    user1.agregarMovimientoValor(user1.getValor());
-                    break;
-                case 2:
-                    user1.colchon();
-                    user1.agregarMovimientoTipo("Colchon");
-                    user1.agregarMovimientoValor(user1.getValor());
-                    break;
-                case 3:
-                    user1.meta();
-                    user1.agregarMovimientoTipo("Meta");
-                    user1.agregarMovimientoValor(user1.getValor());
-                    break;
-                case 4:
-                    user1.bolsillo();
-                    user1.agregarMovimientoTipo("Bolsillo");
-                    user1.agregarMovimientoValor(user1.getValor());
-                    break;
-                case 5:
-                    user1.sacarPlata();
-                    user1.agregarMovimientoTipo("Sacar plata");
-                    user1.agregarMovimientoValor(user1.getValor());
-                    break;
-                case 6:
-                    user1.getMovimientosTipo();
-                    user1.getMovimientosValor();
-                    break;
-                case 7:
-                    cout << "hi";
-                    break;
-                default:
-                    cout << "no valida" << endl;
-                    break;
-                }
-                */
                 
                 if(opcion == 1){
                     user1.recarga();
@@ -100,7 +60,7 @@ int main(){
                 }
                 else {
                     cout << "Ingrese una opcion valida "<< endl;
-                    
+                    break;
                 }
                 
             }
@@ -108,9 +68,45 @@ int main(){
         }
         else if (opApp == 2)
         {
-            if (User2.accesoApp() == true){
-
-            }
+            if (user2.accesoApp() == true){
+                while (true)
+                {   
+                    cout << "su valor disponible es: " << user2.getSaldoCuenta() << endl; 
+                    cout << "Eliga la opcion para la funcion que desea: " << endl;
+                    cin >> opcion;
+                    
+                    if(opcion == 1){
+                        user2.recarga();
+                        user2.agregarMovimientoTipo("Recarga");
+                        user2.agregarMovimientoValor(user2.getValor());
+                    }
+                    else if(opcion == 2){
+                        user2.bolsillo();
+                        user2.agregarMovimientoTipo("Bolsillo");
+                        user2.agregarMovimientoValor(user2.getValorBolsillo());
+                    }
+                    else if(opcion == 3){
+                        user2.sacarPlata();
+                        user2.agregarMovimientoTipo("Sacar plata");
+                        user2.agregarMovimientoValor(user2.getValorRetiro());
+                    }
+                    else if(opcion == 4){
+                        user2.pagos();
+                    }
+                    else if(opcion == 5){
+                        user2.imprimirMovimientoTipo();
+                        cout << endl;
+                        user2.imprimirMovimientoValor();
+                    }
+                    else if(opcion == 6){
+                        cout << "Gracias por usar Nequi" << endl;
+                        break;
+                    }
+                    else{
+                        cout << "Ingrese una opcion valida "<< endl;
+                        break;
+                    }
+                }
         }
         else {
             cout << "ingrese una opcion valida" << endl;

@@ -11,7 +11,7 @@ class Davipalta : public Nequi{
 
 
     public:
-    Davipalta(float saldoCuenta){
+    Davipalta(){
 
     };
     
