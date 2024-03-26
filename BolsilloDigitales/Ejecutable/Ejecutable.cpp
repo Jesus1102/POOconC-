@@ -8,13 +8,13 @@ int main(){
 
     int opcion, opApp;
     Nequi user1;
-    Davipalta user2;
+    Daviplata user2;
     
     cout << "Bienvenido a Bolsillos digitales " << endl ;
     
     while (true){
         
-        cout <<"Eliga el bolsilo que desea: "<< endl << "1. para Nequi " << "2. para Daviplata" << endl << "0. para salir" << endl;
+        cout <<"Eliga el bolsilo que desea: "<< endl << "1. para Nequi " << endl << "2. para Daviplata" << endl << "0. para salir" << endl;
         cin >> opApp;
 
         if (opApp == 1){
@@ -23,6 +23,7 @@ int main(){
                 {   
                     cout << "su valor disponible es: " << user1.getSaldoCuenta() << endl; 
                     cout << "Eliga la opcion para la funcion que desea: " << endl;
+                    cout << "1. Recarga " << endl << "2. Colchon " << endl << "3. Meta" << endl << "4. Bolsillo" << endl << "5. Sacar plata" << endl << "6. Movimientos " << endl << "7. Salida " << endl;
                     cin >> opcion;
                     
                     if(opcion == 1){
@@ -57,7 +58,7 @@ int main(){
                     }
                     else if(opcion == 7){
                         cout << "Gracias por usar Nequi" << endl;
-                        break;
+                        return 0;
                     }
                     else {
                         cout << "Ingrese una opcion valida "<< endl;
@@ -73,6 +74,7 @@ int main(){
                 {   
                     cout << "su valor disponible es: " << user2.getSaldoCuenta1() << endl; 
                     cout << "Eliga la opcion para la funcion que desea: " << endl;
+                    cout << "1. Recarga " << endl << "2. Bolsillos" << endl << "3. Sacar plata" << endl << "4. Convenios " << endl << "5. Movimientos " << endl << "6. Salida" << endl;
                     cin >> opcion;
                     
                     if(opcion == 1){
@@ -92,6 +94,8 @@ int main(){
                     }
                     else if(opcion == 4){
                         user2.pagos();
+                        user2.agregarMovimientoTipo("Convenios");
+                        user2.agregarMovimientoValor(0);
                     }
                     else if(opcion == 5){
                         user2.imprimirMovimientoTipo();
@@ -99,8 +103,8 @@ int main(){
                         user2.imprimirMovimientoValor();
                     }
                     else if(opcion == 6){
-                        cout << "Gracias por usar Nequi" << endl;
-                        break;
+                        cout << "Gracias por usar Daviplata" << endl;
+                        return 0;
                     }
                     else{
                         cout << "Ingrese una opcion valida "<< endl;
@@ -109,9 +113,13 @@ int main(){
                 }
             }
         }
+        else if(opApp == 0){
+            cout << "Gracias " << endl;
+            return 0;
+        }
         else {
-            cout << "ingrese una opcion valida" << endl;
-            break;
+            cout << "Ingrese una opcion valida" << endl;
+            
         }
     }
 

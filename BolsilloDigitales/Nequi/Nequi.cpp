@@ -16,7 +16,7 @@ class Nequi{
 
 
     public:
-    Nequi (){
+    Nequi(){
 
     };
 
@@ -281,14 +281,13 @@ class Nequi{
         while (true)
         {   
             cout << "¿Cuanto vas a dejar?" << endl;
-            cout << "-1. para salir" << endl;
+            cout << "0. para salir" << endl;
             cin >> valorBolsillo;
             
-            if(valorBolsillo > saldoCuenta || valorBolsillo < 0 && valorBolsillo != -1){
+            if(valorBolsillo > saldoCuenta || valorBolsillo < 0){
                 cout << "Ingrese un valor valido" << endl;
-                ;
             }
-            else if(valor == -1){
+            else if(valor == 0){
                 break;
             }
             else if (valorBolsillo < saldoCuenta){
