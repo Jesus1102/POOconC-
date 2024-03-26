@@ -6,14 +6,17 @@ using namespace std;
 class Davipalta : public Nequi{
 
     private:
-
-    string correo;
+    float saldoCuenta = 0;
+    
 
 
     public:
     Davipalta(){
 
     };
+    float getSaldoCuenta1(){
+        return saldoCuenta;
+    }
     
     void pagos(){
 

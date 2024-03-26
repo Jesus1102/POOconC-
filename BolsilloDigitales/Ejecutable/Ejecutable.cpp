@@ -10,10 +10,11 @@ int main(){
     Nequi user1;
     Davipalta user2;
     
+    cout << "Bienvenido a Bolsillos digitales " << endl ;
     
     while (true){
         
-        cout << "Bienvenido a Bolsillos digitales " << endl <<"Eliga el bolsilo que desea: "<< endl << "1. para Nequi " << "2. para Daviplata" << endl << "0. para salir" << endl;
+        cout <<"Eliga el bolsilo que desea: "<< endl << "1. para Nequi " << "2. para Daviplata" << endl << "0. para salir" << endl;
         cin >> opApp;
 
         if (opApp == 1){
@@ -70,7 +71,7 @@ int main(){
             if (user2.accesoApp() == true){
                 while (true)
                 {   
-                    cout << "su valor disponible es: " << user2.getSaldoCuenta() << endl; 
+                    cout << "su valor disponible es: " << user2.getSaldoCuenta1() << endl; 
                     cout << "Eliga la opcion para la funcion que desea: " << endl;
                     cin >> opcion;
                     
