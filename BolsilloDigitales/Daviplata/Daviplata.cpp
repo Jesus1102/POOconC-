@@ -1,6 +1,7 @@
 #include <iostream>
 #include <list>
-#include "./BolsilloDigitales/Nequi/Nequi.cpp"
+#include "../Nequi/Nequi.cpp"
+
 using namespace std;
 
 class Davipalta : public Nequi{
@@ -8,7 +9,6 @@ class Davipalta : public Nequi{
     private:
     float saldoCuenta = 0;
     
-
 
     public:
     Davipalta(){
@@ -21,16 +21,16 @@ class Davipalta : public Nequi{
     void pagos(){
 
         int numCuenta, cedula, opPago, opcion, opcion1, random, valorPago1 [4] = {15000,30000, 45000,90000}, valorPago2 [3] = {11900,14900,149000}, valorPago3[4] = {12000,24000,12900,13000};
-        float saldoCuenta = getSaldoCuenta();
+        
         srand(time(NULL));
 
         random = 100000+rand()%(999999+1-100000);
         string listaPagos[3] = {"1. Spotify","2. Crunchyroll","3. Cine Colombia"};
 
 
-        cout << "Bienvenido a recarga desde otro banco" << endl;
-        cout << "Eliga el banco que desea: " << endl;
-        for (int i = 0; i < 5; i++)
+        cout << "Bienvenido a la seccion de pagos" << endl;
+        cout << "Eliga el convenio que desea: " << endl;
+        for (int i = 0; i < 3; i++)
         {
             cout << listaPagos[i] << endl;
         }
@@ -90,7 +90,7 @@ class Davipalta : public Nequi{
 
                                 break;
                             }
-                            else if (opcion1 == 2 && getSaldoCuenta() > 0)
+                            else if (opcion1 == 2 )
                             {
                                 cout << "Pago cancelado " << endl;
                                 break;
@@ -128,7 +128,7 @@ class Davipalta : public Nequi{
 
                                 break;
                             }
-                            else if (opcion1 == 2 && getSaldoCuenta() > 0)
+                            else if (opcion1 == 2)
                             {
                                 cout << "Pago cancelado " << endl;
                                 break;
