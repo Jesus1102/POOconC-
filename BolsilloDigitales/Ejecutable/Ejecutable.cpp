@@ -62,7 +62,7 @@ int main(){
                     }
                     else {
                         cout << "Ingrese una opcion valida "<< endl;
-                        break;
+                        
                     }
                 }
             }
@@ -108,7 +108,7 @@ int main(){
                     }
                     else{
                         cout << "Ingrese una opcion valida "<< endl;
-                        break;
+                        
                     }
                 }
             }

@@ -47,12 +47,12 @@ class Nequi{
     bool accesoApp(){
 
         while( i > 0){
-            /*
+            
             cout << "Ingrese su usuario: " << endl;
             cin >> usuario;
 
             cout << "Ingrese su clave: " << endl;
-            cin >> clave;*/
+            cin >> clave;
 
             for (int i = 0; i < 10; i++){
                 

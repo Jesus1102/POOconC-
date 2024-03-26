@@ -39,13 +39,13 @@ class Daviplata {
     bool accesoApp(){
 
         while( i > 0){
-            /*
+            
             cout << "Ingrese su usuario: " << endl;
             cin >> usuario;
 
             cout << "Ingrese su clave: " << endl;
             cin >> clave;
-            */
+            
             for (int i = 0; i < 10; i++){
                 
                 if (clave == clavesRegistradas[i] && usuario == usuariosRegistrados[i]){
